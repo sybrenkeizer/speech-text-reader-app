@@ -10,9 +10,12 @@
 .form-control {
   display: flex;
   flex-direction: column;
-  border: .1rem solid v.$clr-light;
+  border: .15rem solid v.$clr-light;
   border-radius: v.$radius;
 	box-shadow: v.$bs-regular;
+	transition: 
+		transform 0.25s ease-in-out,
+		box-shadow 0.25s ease-in-out;
 }
 
 

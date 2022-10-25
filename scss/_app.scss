@@ -80,7 +80,7 @@
     overflow: hidden;
     background-color: $clr-accent-dark;
     border-radius: v.$radius;
-    border: .1rem solid v.$clr-light;
+    border: .15rem solid v.$clr-light;
     color: v.$clr-light;
     text-align: center;
     cursor: pointer;
@@ -92,7 +92,11 @@
     &:hover {
       transform: scale(1.01);
       box-shadow: v.$bs-hover;
+    }
 
+    &:active {
+      transform: scale(.99);
+      box-shadow: none;
     }
     
     & img {
