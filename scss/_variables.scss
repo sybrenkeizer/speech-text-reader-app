@@ -5,9 +5,11 @@ $ff-primary: 'Lato', sans-serif;
 
 // Font Size
 $fs-h1: clamp(1.8rem, 1.5rem + 1vw, 2.2rem);
+$fs-h2: clamp(1.6rem, 1.3rem + 0.6vw, 1.9rem);
 $fs-form: clamp(1rem, 0.8rem + 0.7vw, 1.1rem);
 $fs-grid: clamp(1rem, 0.9rem + 0.7vw, 1.2rem);
 $fs-footer: clamp(0.7rem, 0.6rem + 0.5vw, 0.9rem);
+$fs-popup: clamp(1rem, 0.8rem + 0.7vw, 1.1rem);
 
 
 // Font Weight
@@ -34,13 +36,26 @@ $spc-lg: calc($spc-sm * 3);
 
 
 //Box shadow
-$bs-regular:
+// $bs-card:
+  // -0.1rem -0.1rem 0.1rem hsla(0, 0%, 0%, 0.3),
+  // 0.1rem 0.1rem 0.1rem hsla(0, 0%, 0%, 0.3),
+  // 0.1rem 0.1rem 0.1rem hsla(0, 0%, 0%, 0.3),
+  // 0.3rem 0.3rem 0.1rem hsla(0, 0%, 0%, 0.3);
+
+// $bs-card-hover:
+  // -0.1rem -0.1rem 0.2rem hsla(0, 0%, 0%, 0.3),
+  // 0.1rem 0.1rem 0.1rem hsla(0, 0%, 0%, 0.3),
+  // 0.1rem 0.1rem 0.2rem hsla(0, 0%, 0%, 0.3),
+  // 0.1rem 0.1rem 0.3rem hsla(0, 0%, 0%, 0.3),
+  // 0.2rem 0.2rem 0.3rem hsla(0, 0%, 0%, 0.3);
+
+$bs-item:
   -0.1rem -0.1rem 0.4rem hsla(0, 0%, 0%, 0.5),
   0.1rem 0.1rem 0.7rem hsla(0, 0%, 0%, 0.5),
   0.2rem 0.2rem 0.8rem hsla(0, 0%, 0%, 0.5),
   0.3rem 0.3rem 0.7rem hsla(0, 0%, 0%, 0.5);
 
-$bs-hover:
+$bs-item-hover:
   -0.1rem -0.1rem 0.4rem hsla(0, 0%, 0%, 0.5),
   0.2rem 0.2rem 0.7rem hsla(0, 0%, 0%, 0.5),
   0.3rem 0.3rem 0.9rem hsla(0, 0%, 0%, 0.5),

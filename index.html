@@ -12,12 +12,18 @@
 			referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="dist/css/style.css" />
 		<script src="js/app.js" defer></script>
-		<title>Speech Text Reader</title>
+		<title>Speechy Text Reader</title>
 	</head>
 	<body>
 		<div class="wrapper">
-			<header>
-				<h1 class="main-title">Speech Text Reader</h1>
+			<header class="main-header">
+				<a
+					href="#"
+					id="main-header__settings-btn"
+					class="main-header__settings-btn">
+					<i class="fa-solid fa-sliders"></i>
+				</a>
+				<h1 class="main-header__title">Speechy Text Reader</h1>
 			</header>
 
 			<main>
@@ -30,10 +36,7 @@
 						>
 						<select
 							id="custom-input__voice-menu"
-							class="custom-input__voice-menu">
-							<option value="en">English</option>
-							<option value="fr">French</option>
-						</select>
+							class="custom-input__voice-menu"></select>
 					</div>
 
 					<div class="form-control">
@@ -64,5 +67,32 @@
 				>
 			</footer>
 		</div>
+
+		<div id="overlay" class="overlay"></div>
+
+		<div id="popup" class="popup">test</div>
+
+		<aside id="settings" class="settings">
+			<header class="settings-header">
+
+				<h2 class="settings-header__title">Settings</h2>
+
+				<a href="#" id="settings-header__close-btn" class="settings-header__close-btn">
+					<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				</a>
+
+			</header>
+			<!-- Voice -->
+
+			<!-- Volume -->
+
+			<!-- Pitch -->
+
+			<!-- Speed -->
+
+			<!-- Create new item -->
+			<!-- - add image -->
+			<!-- - add text -->
+		</aside>
 	</body>
 </html>
