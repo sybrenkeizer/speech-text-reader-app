@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="dist/css/style.css" />
+		<script src="js/app.js" defer></script>
+		<title>Speech Text Reader</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1 class="main-title">Speech Text Reader</h1>
+			</header>
+
+			<main>
+				<form id="custom-input" class="custom-input">
+					<div class="form-control">
+						<label
+							id="custom-input__voice-menu-label"
+							class="custom-input__voice-menu-label"
+							>Voice</label
+						>
+						<select
+							id="custom-input__voice-menu"
+							class="custom-input__voice-menu">
+							<option value="en">English</option>
+							<option value="fr">French</option>
+						</select>
+					</div>
+
+					<div class="form-control">
+						<textarea
+							rows="3"
+							id="custom-input__text-input"
+							class="custom-input__text-input"
+							placeholder="Enter reading text here.."></textarea>
+					</div>
+
+					<div class="form-control">
+						<button
+							type="submit"
+							id="custom-input__submit-btn"
+							class="custom-input__submit-btn">
+							<i class="fa-solid fa-volume-high audio-icon"></i>
+						</button>
+					</div>
+				</form>
+
+				<div id="image-grid" class="image-grid"></div>
+			</main>
+
+			<footer>
+				<small
+					>&copy; SpeechyRead <span id="copyright-date">2022</span>. No right
+					reserved.</small
+				>
+			</footer>
+		</div>
+	</body>
+</html>

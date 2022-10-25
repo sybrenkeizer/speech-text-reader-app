@@ -1,0 +1,118 @@
+@use './variables' as v;
+@use './breakpoints' as b;
+
+
+.main-title {
+  margin-block: 1em;
+  text-align: center;
+}
+
+.custom-input {
+  display: grid;
+  grid-template-columns: 3fr 4fr 5.5rem;
+  gap: v.$spc-sm;
+  margin-bottom: v.$spc-md;
+  padding: 1.5em;
+  background-color: v.$clr-dark;
+  border-radius: v.$radius;
+  font-size: v.$fs-form;
+
+  @include b.breakpoint-down(small) {
+    grid-template-columns: 1fr;
+  }
+
+  .form-control > * {
+    padding: 0.5em 0.8em;
+  }
+
+  .form-control:last-child {
+    transition: 
+    transform 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
+  }
+
+  .form-control:last-child:hover {
+    box-shadow: v.$bs-hover;
+    transform: scale(1.01);
+  }
+
+  &__voice-menu-label {
+    background-color: v.$clr-accent-dark;
+    color: v.$clr-light;
+  }
+  
+  &__voice-menu {
+    height: 100%;
+  }
+  
+  &__text-input {
+    height: 100%;
+    resize: none;
+  }
+
+  &__submit-btn {
+    height: 100%;
+    padding-block: 2em;
+    font-size: 1.3em;
+    color: inherit;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+
+    @include b.breakpoint-down(small) {
+      font-size: 1em;
+    }
+  }
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5em;
+  margin-bottom: v.$spc-sm;
+  padding: v.$spc-md;
+  background-color: v.$clr-dark;
+  border-radius: v.$radius;
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: $clr-accent-dark;
+    border-radius: v.$radius;
+    border: .1rem solid v.$clr-light;
+    color: v.$clr-light;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: v.$bs-regular;
+    transition:
+      transform 0.25s ease-in-out,
+      box-shadow 0.25s ease-in-out;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: v.$bs-hover;
+
+    }
+    
+    & img {
+      width: 100%;
+      max-height: 15rem;
+      object-fit: cover;
+      flex-basis: 90%;
+    }
+    
+    & p {
+      flex-basis: 10%;
+      padding-block: 0.7em;
+      font-size: v.$fs-grid;
+    }
+  }
+}
+
+footer {
+  padding-block: 0.3em;
+  color: v.$clr-dark;
+  text-align: center;
+  font-size: v.$fs-footer;
+}
