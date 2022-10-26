@@ -7,3 +7,13 @@ h1 {
 h2 {
   font-size: v.$fs-h2;
 }
+
+input,
+select,
+textarea {
+  font-size: v.$fs-input;
+}
+
+label {
+  font-size: v.$fs-label;
+}

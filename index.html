@@ -11,7 +11,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="dist/css/style.css" />
-		<script src="js/app.js" defer></script>
+		<script src="js/app.js" type="module"></script>
 		<title>Speechy Text Reader</title>
 	</head>
 	<body>
@@ -29,19 +29,7 @@
 			<main>
 				<form id="custom-input" class="custom-input">
 					<div class="form-control">
-						<label
-							id="custom-input__voice-menu-label"
-							class="custom-input__voice-menu-label"
-							>Voice</label
-						>
-						<select
-							id="custom-input__voice-menu"
-							class="custom-input__voice-menu"></select>
-					</div>
-
-					<div class="form-control">
 						<textarea
-							rows="3"
 							id="custom-input__text-input"
 							class="custom-input__text-input"
 							placeholder="Enter reading text here.."></textarea>
@@ -52,7 +40,7 @@
 							type="submit"
 							id="custom-input__submit-btn"
 							class="custom-input__submit-btn">
-							<i class="fa-solid fa-volume-high audio-icon"></i>
+							<i class="fa-solid fa-play"></i>
 						</button>
 					</div>
 				</form>
@@ -74,25 +62,162 @@
 
 		<aside id="settings" class="settings">
 			<header class="settings-header">
-
 				<h2 class="settings-header__title">Settings</h2>
 
-				<a href="#" id="settings-header__close-btn" class="settings-header__close-btn">
+				<a
+					href="#"
+					id="settings-header__close-btn"
+					class="settings-header__close-btn">
 					<i class="fa-solid fa-arrow-right-from-bracket"></i>
 				</a>
-
 			</header>
-			<!-- Voice -->
+			<form id="settings-form" class="settings-form">
+				<!-- Voice -->
+				<div class="form-control">
+					<label
+						id="settings-form__voice-menu-label"
+						class="settings-form__voice-menu-label"
+						>Voice
+						<i class="fa-solid fa-language"></i>
+					</label>
+					<select
+						id="settings-form__voice-menu"
+						class="settings-form__voice-menu"></select>
+				</div>
 
-			<!-- Volume -->
+				<!-- Volume -->
+				<div class="form-control">
+					<label
+						id="settings-form__volume-label"
+						class="settings-form__volume-label"
+						>Volume
+						<i class="fa-solid fa-volume-high"></i>
+						<span id="range-input-value__volume" class="range-input-value"
+							>5</span
+						>
+					</label>
+					<div class="range-input-control">
+						<a
+							id="range-input-control__min"
+							class="range-input-control__operator range-input-control__min"
+							>-</a
+						>
+						<input
+							type="range"
+							id="settings-form__volume-input"
+							class="range-input-control__slider"
+							min="0"
+							max="10"
+							step="1"
+							data-slider="volume" />
+						<a
+							id="range-input-control__plus"
+							class="range-input-control__operator range-input-control__plus"
+							>+</a
+						>
+					</div>
+				</div>
 
-			<!-- Pitch -->
+				<!-- Pitch -->
+				<div class="form-control">
+					<label
+						id="settings-form__pitch-label"
+						class="settings-form__pitch-label"
+						>Pitch
+						<i class="fa-solid fa-wave-square"></i>
+						<span id="range-input-value__pitch" class="range-input-value"
+							>5</span
+						>
+					</label>
+					<div class="range-input-control">
+						<a
+							id="range-input-control__min"
+							class="range-input-control__operator range-input-control__min"
+							>-</a
+						>
+						<input
+							type="range"
+							id="settings-form__pitch-input"
+							class="range-input-control__slider"
+							min="0"
+							max="10"
+							step="1"
+							data-slider="pitch" />
+						<a
+							id="range-input-control__plus"
+							class="range-input-control__operator range-input-control__plus"
+							>+</a
+						>
+					</div>
+				</div>
 
-			<!-- Speed -->
+				<!-- Speed -->
+				<div class="form-control">
+					<label
+						id="settings-form__speed-label"
+						class="settings-form__speed-label"
+						>Speed
+						<i class="fa-solid fa-gauge-simple-high"></i>
+						<span id="range-input-value__speed" class="range-input-value"
+							>5</span
+						>
+					</label>
+					<div class="range-input-control">
+						<a
+							id="range-input-control__min"
+							class="range-input-control__operator range-input-control__min"
+							>-</a
+						>
+						<input
+							type="range"
+							id="settings-form__speed-input"
+							class="range-input-control__slider"
+							min="0"
+							max="10"
+							step="1"
+							data-slider="speed" />
+						<a
+							id="range-input-control__plus"
+							class="range-input-control__operator range-input-control__plus"
+							>+</a
+						>
+					</div>
+				</div>
 
-			<!-- Create new item -->
-			<!-- - add image -->
-			<!-- - add text -->
+				<!-- Create new item -->
+				<div class="form-control settings-form__create-item">
+					<label
+						id="settings-form__create-item__label"
+						class="settings-form__create-item__label"
+						>Create Gallery Item
+					</label>
+
+					<!-- - add text -->
+					<div class="settings-form__create-item__text">
+						<label for="item-text-input" class="item-text-label"
+							>Speech Text</label
+						>
+						<input id="item-text-input" class="item-text-input" type="text" 
+						placeholder="Enter reading text here..." />
+					</div>
+
+					<!-- - add image -->
+					<div class="settings-form__create-item__img">
+						<label for="item-img-file-input" class="item-img-file-label"
+							>Add Image</label
+						>
+						<input
+							id="item-img-file-input"
+							class="item-img-file-input"
+							type="file" />
+					</div>
+
+					<!-- Submit Button -->
+					<button>Create Item</button>
+
+				</div>
+
+			</form>
 		</aside>
 	</body>
 </html>

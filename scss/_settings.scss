@@ -1,0 +1,150 @@
+@use './variables' as v;
+
+.settings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  max-width: 38rem;
+  height: 100%;
+  background-color: v.$clr-dark;
+  transition: 
+    transform 0.5s ease-in-out;
+    
+    &-header {
+      position: relative;
+      color: v.$clr-light;
+
+      
+      &__title {
+      text-align: center;
+      margin-block: v.$spc-sm v.$spc-md;
+    }
+
+    &__close-btn {
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      font-size: v.$fs-h2;
+
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: v.$spc-md; 
+    width: 90%;
+    margin-inline: auto;   
+
+    .form-control {
+      background-color: v.$clr-accent-dark;
+
+      label {
+        position: relative;
+        background-color: v.$clr-accent-dark;
+        text-align: center;
+        color: v.$clr-light;
+        margin-block: 0.1em;
+
+        i {
+          margin-left: 0.5em;
+        }
+        
+        .range-input-value {
+          position: absolute;
+          right: 1.9rem;
+        }
+      }
+
+      .range-input-control {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+        &__operator {
+          margin-top: -0.2em;
+          color: v.$clr-accent;
+          font-size: v.$fs-h1;
+          cursor: pointer;
+        }
+
+        &__slider {
+          width: 70%;
+        }
+      }
+    }
+
+    &__voice-menu {
+      cursor: pointer;
+    }
+
+    &__create-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-bottom: 3rem;
+
+      &__text {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: auto;
+        border: 0.15rem solid v.$clr-light;
+        border-radius: v.$radius;
+
+        label {
+          min-width: 7em;
+          padding: 0.5em 0.8em;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.5em 0.8em;
+          border: none;
+        }
+      }
+
+      &__img {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: auto;
+        border: 0.15rem solid v.$clr-light;
+        border-radius: v.$radius;
+
+
+        label {
+          padding: 0.5em 0.8em;
+          min-width: 7em;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.5em 0.8em;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      button {
+        padding: 0.7em 0.8em;
+        font-size: v.$fs-input;
+        font-weight: v.$fw-bold;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.settings.show {
+  transform: translateX(0);
+}

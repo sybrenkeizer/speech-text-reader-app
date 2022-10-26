@@ -6,7 +6,8 @@ $ff-primary: 'Lato', sans-serif;
 // Font Size
 $fs-h1: clamp(1.8rem, 1.5rem + 1vw, 2.2rem);
 $fs-h2: clamp(1.6rem, 1.3rem + 0.6vw, 1.9rem);
-$fs-form: clamp(1rem, 0.8rem + 0.7vw, 1.1rem);
+$fs-input: clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
+$fs-label: clamp(1.1rem, 1rem + 0.4vw, 1.3rem);
 $fs-grid: clamp(1rem, 0.9rem + 0.7vw, 1.2rem);
 $fs-footer: clamp(0.7rem, 0.6rem + 0.5vw, 0.9rem);
 $fs-popup: clamp(1rem, 0.8rem + 0.7vw, 1.1rem);

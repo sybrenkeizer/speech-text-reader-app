@@ -1,8 +1,8 @@
 // TODO - do something with card shadows
 
-
 @use './variables' as v;
 @use './breakpoints' as b;
+
 
 .main-header {
   position: relative;
@@ -30,42 +30,24 @@
 
 .custom-input {
   display: grid;
-  grid-template-columns: 1fr 1fr 5.5rem;
+  grid-template-columns: 1fr 5.5rem;
   gap: v.$spc-sm;
   margin-bottom: v.$spc-md;
   padding: 1.5em;
   background-color: v.$clr-dark;
   border-radius: v.$radius;
-  font-size: v.$fs-form;
-
-  @include b.breakpoint-down(small) {
-    grid-template-columns: 1fr;
-  }
-
-  .form-control > * {
-    padding: 0.5em 0.8em;
-  }
 
   .form-control:last-child {
     transition: 
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
+    transform 0.3s ease-in,
+    box-shadow 0.3s ease-in;
   }
 
   .form-control:last-child:hover {
     box-shadow: v.$bs-item-hover;
-    transform: scale(1.01);
+    transform: scale(1.04);
   }
 
-  &__voice-menu-label {
-    background-color: v.$clr-accent-dark;
-    color: v.$clr-light;
-  }
-  
-  &__voice-menu {
-    height: 100%;
-  }
-  
   &__text-input {
     height: 100%;
     resize: none;
@@ -73,15 +55,10 @@
 
   &__submit-btn {
     height: 100%;
-    padding-block: 2em;
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: inherit;
     transition: background-color 0.2s ease-in-out;
     cursor: pointer;
-
-    @include b.breakpoint-down(small) {
-      font-size: 1em;
-    }
   }
 }
 
@@ -171,85 +148,4 @@ footer {
   color: v.$clr-dark;
   text-align: center;
   font-size: v.$fs-footer;
-}
-
-.overlay {
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: hsla(0, 0%, 10%, 0.8);
-  opacity: 0;
-  transition: 
-    visibility 0.4s ease-in-out,
-    opacity 0.4s ease-in-out;
-}
-
-.overlay.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  position: absolute;
-  top: -0.5rem;
-  left: 50%;
-  transform: translate(-50%, -150%);
-  min-width: 22rem;
-  padding: 1.5em 2em;
-  background-color: v.$clr-dark;
-  border: 0.15rem solid v.$clr-accent;
-  border-radius: v.$radius;
-  color: v.$clr-light;
-  font-size: v.$fs-popup;
-  text-align: center;
-  transition: transform 0.5s ease-in-out;
-}
-
-.popup.show {
-  transform: translate(-50%, 0);
-}
-
-.settings {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translateX(-100%);
-  width: 100%;
-  max-width: 30rem;
-  height: 100%;
-  border-right: 0.2rem solid v.$clr-accent;
-  background-color: v.$clr-dark;
-  color: v.$clr-light;
-  transition: 
-    transform 0.5s ease-in-out;
-    
-    &-header {
-      position: relative;
-      
-      &__title {
-      text-align: center;
-      margin-block: v.$spc-sm;
-    }
-
-    &__close-btn {
-      position: absolute;
-      top: 0;
-      right: 1rem;
-      font-size: v.$fs-h2;
-
-      i {
-        transform: rotate(180deg);
-      }
-    }
-
-  }
-  
-}
-
-.settings.show {
-  transform: translateX(0);
-
 }
