@@ -3,7 +3,7 @@
 // TODO - ADD: CRUD functionality
 // TODO - ENHANCE: box shadow and button effects
 
-import { http } from './http.js';
+import { http } from '/http.js';
 
 const voiceMenuEl = document.getElementById('settings-form__voice-menu');
 const textAreaEl = document.getElementById('custom-input__text-input');
