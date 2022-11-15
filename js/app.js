@@ -36,7 +36,7 @@ const createCell = (item) => {
 
 const getImageSpeechData = () => {
 	http
-		.get('/json/db.json')
+		.get('./json/db.json')
 		.then(data => data.forEach(createCell))
 		.catch(error => console.error(error));
 }
